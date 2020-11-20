@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr1 = ["10", 11, "45", 200, 1]
+    function sort(arr) {
+      if(Array.isArray(arr) && arr.length < 10) {
+        for (let i = 0; i < arr.length; i++) {
+          for(let j = 0; j < arr.length; j++) {
+            let temp = ''
+            if(arr[i] < arr[j]) {
+              temp = arr[j]
+              arr[j] = arr[i]
+              arr[i] = temp
+            }
+          }
+        }
+        console.log(arr);
+      } else {
+        console.error('请输入一个长度小于10的数组')
+      }
+    }
+    sort(arr1)
+  </script>
+</body>
+</html>
